@@ -1,19 +1,19 @@
-import smtplib
 import asyncio
+from aiosmtpd import SMTPServer, SMTPSession
 
-class CustomSMTPServer(smtplib.SMTPServer):
-    def process_message(self, peer, mailfrom, rcpttos, data, **kwargs):
-        print('Incoming message from:', peer)
-        print('From:', mailfrom)
-        print('To:', rcpttos)
+class CustomSMTPSession(SMTPSession):
+    async def handle_DATA(self, data):
+        print('Incoming message from:', self.peer)
+        print('From:', self.mail_from)
+        print('To:', self.mail_to)
         print('Message:')
         print(data)
-        return
+        return '250 OK'
 
 if __name__ == "__main__":
-    server = CustomSMTPServer(('localhost', 1025), None)
+    server = SMTPServer(('localhost', 1025), CustomSMTPSession)
     print("SMTP server running on localhost:1025")
     try:
-        asyncio.run(server.serve_forever())
+        asyncio.run(server.start())
     except KeyboardInterrupt:
         pass
