@@ -12,4 +12,3 @@ Error checking DNS records: The DNS query name does not exist: usergeneral68\@gm
 Do you want to test AWS SES settings? (y/n): y
 Error accessing AWS SES: You must specify a region.
 Report generated: smtp_vulnerability_report.txt
-PS C:\Users\skyla\OneDrive\Documentos\GitHub\SMPTLOG> 
