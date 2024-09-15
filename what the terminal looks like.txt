@@ -1,0 +1,15 @@
+PS C:"yourfilepath"> 
+Enter SMTP server address (e.g., smtp.example.com): usergeneral68@gmail.com
+Enter SMTP server port (e.g., 587): 5
+Use TLS? (y/n, default y): y
+Enter SMTP username (leave blank if none): 
+Enter SMTP password (leave blank if none): 
+Enter test recipient email address: usergneral68@gmail.com
+Failed to connect to server usergeneral68@gmail.com on port 5 for SSL/TLS check.
+Failed to connect to server usergeneral68@gmail.com on port 5.
+Failed to connect to server usergeneral68@gmail.com on port 5.
+Error checking DNS records: The DNS query name does not exist: usergeneral68\@gmail.com.
+Do you want to test AWS SES settings? (y/n): y
+Error accessing AWS SES: You must specify a region.
+Report generated: smtp_vulnerability_report.txt
+PS C:\Users\skyla\OneDrive\Documentos\GitHub\SMPTLOG> 
