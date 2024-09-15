@@ -1,0 +1,8 @@
+PS C: you folder path:
+SMTP server running on localhost:1025
+PS C:PS C: you folder path:
+Enter SMTP server address (e.g., smtp.example.com): smtp.gmail.com
+Enter SMTP server port (e.g., 587): 587
+Use TLS? (y/n, default y): y
+Connected to smtp.gmail.com on port 587
+SMTP server is reachable and responded successfully.
